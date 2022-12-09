@@ -20,7 +20,7 @@ class Home_Page extends StatefulWidget {
 
 class _Home_PageState extends State<Home_Page> {
   int selectedindex = 0;
-  List pages = [HomeScreen(), Usage(), Store(), Help(), Settings()];
+  List pages = [HomeScreen(), Usage(), Store_tap(), Help(), Settings()];
 
   @override
   Widget build(BuildContext context) {
