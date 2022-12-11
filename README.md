@@ -1,4 +1,4 @@
-# project-3
+ project-3
 
 For the weekly project, it's should be done individually, be prepared to present your work on Sunday.
 
