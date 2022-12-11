@@ -1,9 +1,16 @@
-# project-3
+# rescue_app
 
-For the weekly project, it's should be done individually, be prepared to present your work on Sunday.
+A new Flutter project.
 
-Build your flutter project based on your idea, your project should include at least eight interfaces.
+## Getting Started
 
-### your submission will NOT BE ACCEPTED If the project doesn’t match your idea.
+This project is a starting point for a Flutter application.
 
-Note: Name your app `your name-project3`
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
