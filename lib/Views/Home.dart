@@ -20,8 +20,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  String author = '';
-  String text = "";
+  String author = "Will Rogers";
+  String text = "Don't let yesterday take up too much of today";
   @override
   Widget build(BuildContext context) {
     //--------------------------------------------------------------------------
@@ -189,6 +189,35 @@ class _HomeState extends State<Home> {
             height: 30,
           ),
           ////----------------------------------------------------------------
+          SectionTitle(Name: "Recently added"),
+          SizedBox(
+            height: 20,
+          ),
+          //------------------------------------------------------------------
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                Books(
+                  bookCover: "images/book12.jpeg",
+                  bookTitel: "Ways to Make Friends",
+                  author: "Jairo Buitrago",
+                  onTapp: () {},
+                ),
+                Books(
+                  bookCover: "images/book13.jpeg",
+                  bookTitel: "Walter Had a Best Friend",
+                  author: "Jon Scieszka",
+                  onTapp: () {},
+                ),
+                Books(
+                    bookCover: "images/book14.jpeg",
+                    bookTitel: "Climb On!",
+                    author: "Baptiste Paul",
+                    onTapp: () {}),
+              ],
+            ),
+          ),
         ],
       )),
     );

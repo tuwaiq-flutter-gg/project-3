@@ -111,7 +111,7 @@ class Read extends StatelessWidget {
                                         allowHalf: true,
                                         allowClear: true,
                                         initialValue: 3.5,
-                                        readOnly: false,
+                                        readOnly: true,
                                         onChange: (value) => print(value),
                                       ),
                                       SizedBox(
