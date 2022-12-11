@@ -4,6 +4,7 @@ import 'package:salem_project3/components/bbar.dart';
 import 'package:salem_project3/components/profilebtns.dart';
 import 'package:salem_project3/components/spacing.dart';
 import 'package:salem_project3/pages/chngpwd.dart';
+import 'package:salem_project3/pages/myserv.dart';
 import 'package:salem_project3/pages/signin.dart';
 
 import '../main.dart';
@@ -49,7 +50,11 @@ class Profile extends StatelessWidget {
                   Get.to(CPwd());
                 },
                 child: Profilebtns(btnName: "Change Password")),
-            Profilebtns(btnName: "My Surveys"),
+            InkWell(
+                onTap: () {
+                  Get.to(Myserv());
+                },
+                child: Profilebtns(btnName: "My Surveys")),
             Profilebtns(btnName: "My Points"),
             Profilebtns(btnName: "Reviews"),
             Spacing(

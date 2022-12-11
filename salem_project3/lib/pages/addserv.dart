@@ -58,19 +58,19 @@ class _AddServState extends State<AddServ> {
             Spacing(height: 40),
             Txtf(
               control: qq!.q3,
-              hint: "Q2",
+              hint: "Q3",
               pwd: false,
             ),
             Spacing(height: 40),
             Txtf(
               control: qq!.q4,
-              hint: "Q2",
+              hint: "Q4",
               pwd: false,
             ),
             Spacing(height: 40),
             Txtf(
               control: qq!.q5,
-              hint: "Q2",
+              hint: "Q5",
               pwd: false,
             ),
             Spacing(height: 100),
