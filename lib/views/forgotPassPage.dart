@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:perject_3/colorStyle.dart';
 import 'package:perject_3/components/mainComponents/mainTextField.dart';
-import 'package:perject_3/views/NavigationPage.dart';
-import 'package:perject_3/views/forgotPassPage.dart';
-import '../colorStyle.dart';
+import 'package:perject_3/views/navigationPage.dart';
+import 'package:perject_3/views/singInPsge.dart';
 
-class SignInPage extends StatelessWidget {
-  const SignInPage({super.key});
+class ForgotPassPage extends StatelessWidget {
+  const ForgotPassPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: ColorStyles.onPrimary,
+        title: Text("Restore Password"),
+      ),
       body: SafeArea(
         child: Center(
             child: Column(
@@ -38,7 +42,7 @@ class SignInPage extends StatelessWidget {
                   const Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "Sign in",
+                      "Restore Password",
                       style: TextStyle(fontSize: 24),
                     ),
                   ),
@@ -56,12 +60,11 @@ class SignInPage extends StatelessWidget {
                     height: 10,
                   ),
                   const MainTextField(
-                    hintText: "Password",
+                    hintText: "Phone Number",
                     prefixIcon: Icon(
-                      Icons.lock,
+                      Icons.phone,
                       color: ColorStyles.onPrimary,
                     ),
-                    suffixIcon: Icon(Icons.remove_red_eye),
                   ),
                   const SizedBox(
                     height: 10,
@@ -70,36 +73,28 @@ class SignInPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SignInPage(),
+                            ),
+                          );
+                        },
                         style: TextButton.styleFrom(
                           foregroundColor: ColorStyles.onPrimary,
                         ),
-                        child: InkWell(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => ForgotPassPage(),
-                                ),
-                              );
-                            },
-                            child: const Text("FORGOT PASSWORD")),
+                        child: const Text("SIGN IN"),
                       ),
                       const SizedBox(
                         width: 5,
                       ),
                       ElevatedButton(
-                        onPressed: () {
-                          Navigator.pushAndRemoveUntil(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => NavigaitonPage()),
-                              (route) => false);
-                        },
+                        onPressed: () {},
                         style: ElevatedButton.styleFrom(
                           backgroundColor: ColorStyles.onPrimary,
                         ),
-                        child: const Text("SIGN IN"),
+                        child: const Text("Restore"),
                       ),
                     ],
                   )
