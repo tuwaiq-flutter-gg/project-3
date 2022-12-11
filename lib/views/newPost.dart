@@ -54,7 +54,7 @@ class _newPostState extends State<newPost> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        "Found a pet or Lost a pet",
+                        "Found or Lost a pet",
                         style: GoogleFonts.openSans(
                           fontSize: 18,
                           color: colors.Text,
@@ -215,7 +215,11 @@ class _newPostState extends State<newPost> {
               ),
               primaryButton(
                 title: "Submit",
-                onPressed: () {},
+                onPressed: () {
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      content: Text('Your Post is Added Successfully 🎉'),
+                      backgroundColor: colors.primary));
+                },
               )
             ],
           ),

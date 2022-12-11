@@ -51,7 +51,61 @@ class forgetPassword extends StatelessWidget {
           ),
           primaryButton(
             title: 'Send Request',
-            onPressed: () {},
+            onPressed: () {
+              showDialog<void>(
+                context: context,
+                builder: (BuildContext context) => AlertDialog(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(25.0),
+                  ),
+                  title: Text('An Email Was Sent To You',
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.asap(
+                        color: Color(0xff606060),
+                        fontSize: 17,
+                      )),
+                  content: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    //position
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          ElevatedButton(
+                            child: Text(
+                              'OK',
+                              style: GoogleFonts.asap(
+                                fontSize: 21,
+                                color: const Color(0xffffffff),
+                                fontWeight: FontWeight.w700,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                            style: ElevatedButton.styleFrom(
+                                alignment: Alignment.center,
+                                fixedSize: Size(
+                                    MediaQuery.of(context).size.width / 2.7,
+                                    MediaQuery.of(context).size.width / 10),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(100.0),
+                                ),
+                                //padding: EdgeInsets.all(2),
+                                elevation: 0,
+                                primary: colors.primary,
+                                shadowColor: Colors.transparent),
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              );
+            },
           ),
         ],
       ),

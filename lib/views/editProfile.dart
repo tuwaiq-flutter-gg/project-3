@@ -27,7 +27,7 @@ class editProfile extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.transparent,
         title: Text(
-          "Profile",
+          "Edit Profile",
           style: GoogleFonts.openSans(
             fontSize: 24,
             color: colors.Text,
@@ -91,7 +91,11 @@ class editProfile extends StatelessWidget {
           ),
           primaryButton(
             title: 'Save',
-            onPressed: () {},
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  content: Text('Your Information Updated Successfully 🎉'),
+                  backgroundColor: colors.primary));
+            },
           ),
         ],
       ),
