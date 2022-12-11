@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -10,6 +12,7 @@ import 'package:rescue_app/components/customTextFieldProfile.dart';
 import 'package:rescue_app/components/primaryButton.dart';
 import 'package:rescue_app/components/textButton.dart';
 import 'package:rescue_app/style.dart';
+import 'package:image_picker/image_picker.dart';
 
 enum Type { Lost, Found }
 
@@ -23,6 +26,8 @@ class newPost extends StatefulWidget {
 }
 
 class _newPostState extends State<newPost> {
+  final ImagePicker _picker = ImagePicker();
+  XFile? image;
   Type _type = Type.Lost;
   Category _category = Category.Cat;
   @override
@@ -205,7 +210,11 @@ class _newPostState extends State<newPost> {
                     textButton(
                       name: 'Upload a picture',
                       underline: false,
-                      onPressed: () {},
+                      onPressed: () async {
+                        image = (await _picker.pickImage(
+                            source: ImageSource.gallery))!;
+                        setState(() {});
+                      },
                     ),
                   ],
                 ),

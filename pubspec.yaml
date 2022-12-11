@@ -39,6 +39,7 @@ dependencies:
   google_fonts: ^3.0.1
   get: ^4.6.5
   toggle_switch: ^2.0.1
+  image_picker: ^0.8.6
 
 dev_dependencies:
   flutter_test:
