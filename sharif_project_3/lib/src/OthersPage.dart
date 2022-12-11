@@ -122,7 +122,8 @@ class _OtherPageState extends State<OtherPage> {
                   onTap: () {
                     Get.to(
                       OtherPost(
-                        userIndex: widget.otherIndex,
+                        userIndex: widget.userIndex,
+                        otherIndex: widget.otherIndex,
                         postIndex: index,
                       ),
                     );

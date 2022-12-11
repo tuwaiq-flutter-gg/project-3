@@ -11,8 +11,13 @@ import 'package:project_3/src/LogOut.dart';
 
 class OtherPost extends StatefulWidget {
   final int userIndex;
+  final int otherIndex;
   final int postIndex;
-  const OtherPost({Key? key, required this.userIndex, required this.postIndex})
+  const OtherPost(
+      {Key? key,
+      required this.otherIndex,
+      required this.postIndex,
+      required this.userIndex})
       : super(key: key);
 
   @override
@@ -70,7 +75,7 @@ class _MyPostState extends State<OtherPost> {
                           userName: users[widget.userIndex].userName,
                           text: comment.text,
                         );
-                        users[widget.userIndex]
+                        users[widget.otherIndex]
                             .posts[widget.postIndex]
                             .comments
                             .add(newComment);
@@ -114,7 +119,7 @@ class _MyPostState extends State<OtherPost> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Text(
-                    users[widget.userIndex].posts[widget.postIndex].title,
+                    users[widget.otherIndex].posts[widget.postIndex].title,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 25,
@@ -128,7 +133,7 @@ class _MyPostState extends State<OtherPost> {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: Image.file(
-                  File(users[widget.userIndex]
+                  File(users[widget.otherIndex]
                       .posts[widget.postIndex]
                       .image
                       .path),
@@ -139,7 +144,7 @@ class _MyPostState extends State<OtherPost> {
               padding: const EdgeInsets.all(15),
               child: Center(
                 child: Text(
-                  users[widget.userIndex].posts[widget.postIndex].description,
+                  users[widget.otherIndex].posts[widget.postIndex].description,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 25,
@@ -147,7 +152,7 @@ class _MyPostState extends State<OtherPost> {
                 ),
               ),
             ),
-            if (users[widget.userIndex]
+            if (users[widget.otherIndex]
                 .posts[widget.postIndex]
                 .comments
                 .isEmpty)
@@ -166,12 +171,12 @@ class _MyPostState extends State<OtherPost> {
               ListView.builder(
                 shrinkWrap: true,
                 physics: NeverScrollableScrollPhysics(),
-                itemCount: users[widget.userIndex]
+                itemCount: users[widget.otherIndex]
                     .posts[widget.postIndex]
                     .comments
                     .length,
                 itemBuilder: (context, index) => CommentCard(
-                  comment: users[widget.userIndex]
+                  comment: users[widget.otherIndex]
                       .posts[widget.postIndex]
                       .comments[index],
                 ),

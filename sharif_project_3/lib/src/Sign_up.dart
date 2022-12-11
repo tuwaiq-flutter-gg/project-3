@@ -52,9 +52,7 @@ class SignUp extends StatelessWidget {
                   CustomButton(
                     title: 'Sign Up',
                     press: () {
-                      String error = "";
                       if (password.text != rePassword.text) {
-                        error = "Password does not match!!";
                         showDialog(
                           context: context,
                           builder: (context) => Padding(
@@ -62,33 +60,7 @@ class SignUp extends StatelessWidget {
                             child: AlertDialog(
                               insetPadding: EdgeInsets.zero,
                               content: Text(
-                                error,
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  color: Colors.red,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                          ),
-                        );
-                      }
-                      if (users.firstWhereOrNull(
-                              (element) => element.userName == userName.text) !=
-                          null) {
-                        error =
-                            "UserName already exists please choose another one!";
-                      }
-                      if (error.isNotEmpty) {
-                        showDialog(
-                          context: context,
-                          builder: (context) => Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 20),
-                            child: AlertDialog(
-                              insetPadding: EdgeInsets.zero,
-                              content: Text(
-                                error,
+                                "Password does not match!!",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontSize: 30,
@@ -100,13 +72,38 @@ class SignUp extends StatelessWidget {
                           ),
                         );
                       } else {
-                        User newUser = User(
-                          userName: userName.text,
-                          password: password.text,
-                        );
-                        users.add(newUser);
+                        if (users.firstWhereOrNull((element) =>
+                                element.userName == userName.text) !=
+                            null) {
+                          print("object");
+                          showDialog(
+                            context: context,
+                            builder: (context) => Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 20),
+                              child: AlertDialog(
+                                insetPadding: EdgeInsets.zero,
+                                content: Text(
+                                  "UserName already exists please choose another one!",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 30,
+                                    color: Colors.red,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          );
+                        } else {
+                          User newUser = User(
+                            userName: userName.text,
+                            password: password.text,
+                          );
+                          users.add(newUser);
+                          Get.back();
+                        }
                       }
-                      Get.back();
                     },
                   ),
                   //   Container(
