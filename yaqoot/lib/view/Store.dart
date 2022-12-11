@@ -65,7 +65,9 @@ class Store_tap extends StatelessWidget {
           body: TabBarView(
             children:[
              Store(),
-             Packages()
+             Packages(),
+              Store(),
+               Store(),
              
             ] 
           )),

@@ -137,7 +137,7 @@ class HomeScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 9, right: 50, top: 5),
               child: Container(
-                  height: 150,
+                  height: 170,
                   width: Get.width,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
@@ -172,11 +172,11 @@ class HomeScreen extends StatelessWidget {
                                       color: Color.fromARGB(255, 117, 30, 8)),
                                 ),
                                 Text(
-                                  'Send free unlimited apps to your friends from',
+                                  'Send free unlimited apps to your ',
                                   style: TextStyle(fontSize: 12),
                                 ),
                                 Text(
-                                  ' here',
+                                  ' friends from here',
                                   style: TextStyle(fontSize: 12),
                                 ),
                                 Text(

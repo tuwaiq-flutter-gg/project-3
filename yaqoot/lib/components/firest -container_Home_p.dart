@@ -9,11 +9,13 @@ class Frist_c extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [ImageIcon(AssetImage(Img.toString()),size: 30,color:Color.fromARGB(255, 117, 30, 8),), Padding(
-        padding: const EdgeInsets.only(top: 10),
-        child: Text(name.toString()),
-      )],
+    return Expanded(
+      child: Column(
+        children: [ImageIcon(AssetImage(Img.toString()),size: 25,color:Color.fromARGB(255, 117, 30, 8),), Padding(
+          padding: const EdgeInsets.only(top: 10),
+          child: Text(name.toString()),
+        )],
+      ),
     );
   }
 }

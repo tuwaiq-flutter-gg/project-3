@@ -13,7 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
      
       home: Home_Page(),
-      theme: ThemeData(appBarTheme:AppBarTheme(backgroundColor: Color(0xffFFFFFF) ),
+      theme: ThemeData(appBarTheme:AppBarTheme(backgroundColor: Color(0xffFFFFFF), ),
+      scaffoldBackgroundColor: Color.fromARGB(255, 221, 220, 220),
+      
     )
     );
   }

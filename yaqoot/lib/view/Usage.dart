@@ -84,7 +84,7 @@ class test extends StatelessWidget {
                             children: [
                               Container(
                                 height: 50,
-                                width: 392,
+                                width: Get.width/2,
                                 alignment: Alignment.topCenter,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),

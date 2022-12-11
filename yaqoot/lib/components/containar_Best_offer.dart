@@ -94,7 +94,7 @@ class Producer extends StatelessWidget {
             ),
             Image.asset(
               img.toString(),
-              height: 100,
+              height: 78,
             ),
             Text("$pris SAR"),
             Padding(

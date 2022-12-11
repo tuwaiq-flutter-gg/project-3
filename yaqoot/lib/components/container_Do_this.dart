@@ -121,11 +121,11 @@ class P_C extends StatelessWidget {
                   ),
                   child: Center(
                       child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                   
                     children: [
-                      Icon(icon,size: 40,),
+                      Icon(icon,size: 30,),
                       Padding(
-                        padding: const EdgeInsets.only(right: 55),
+                        padding: const EdgeInsets.only(left: 20),
                         child: Text(
                           img,
                           style: TextStyle(fontSize: 20, color: Colors.white),
