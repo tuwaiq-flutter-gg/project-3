@@ -1,16 +1,11 @@
-# perject_3
 
-A new Flutter project.
+# project-3
 
-## Getting Started
+For the weekly project, it's should be done individually, be prepared to present your work on Sunday.
 
-This project is a starting point for a Flutter application.
+Build your flutter project based on your idea, your project should include at least eight interfaces.
 
-A few resources to get you started if this is your first Flutter project:
+### your submission will NOT BE ACCEPTED If the project doesn’t match your idea.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Note: Name your app `your name-project3`
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
