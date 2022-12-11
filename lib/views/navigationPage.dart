@@ -17,7 +17,7 @@ class _NavigaitonPageState extends State<NavigaitonPage> {
 
   final List screen = const [
     HomePage(),
-    LeaderBoardPage(),
+    LeaderboardPage(),
     EventPage(),
     GroupsPage(),
     ProfilePage(),
