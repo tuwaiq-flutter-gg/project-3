@@ -45,14 +45,11 @@ class CartScreen extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         Text('Your Orders', style: headerStyle),
-        RaisedButton.icon(
+        IconButton(
           icon: Icon(Icons.delete_forever),
           color: Colors.red,
-          shape: StadiumBorder(),
           splashColor: Colors.white60,
           onPressed: () {},
-          textColor: Colors.white,
-          label: Text('Clear'),
         ),
       ],
     );
@@ -92,14 +89,14 @@ class CartScreen extends StatelessWidget {
 
   Widget addToCardButton(context) {
     return Center(
-      child: RaisedButton(
+      child: ElevatedButton(
         onPressed: () {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => CheckOutScreen()));
         },
-        padding: const EdgeInsets.symmetric(horizontal: 64, vertical: 12),
-        color: mainColor,
-        shape: const StadiumBorder(),
+        style: ElevatedButton.styleFrom(
+          
+        ),
         child: Text('CheckOut', style: titleStyle),
       ),
     );

@@ -91,7 +91,7 @@ class _CheckOutScreenState extends State<CheckOutScreen>
         padding: const EdgeInsets.symmetric(vertical: 32.0, horizontal: 0),
         child: Text('$weekDay, ${day}th of $month ', style: headerStyle),
       ),
-      FlatButton(
+      TextButton(
         child: Text('+ Add to order'),
         onPressed: () => Navigator.of(context).pop(),
       ),
